@@ -1,0 +1,182 @@
+@font-face {
+    font-family: Roboto;
+    src: url("fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Norse;
+    src: url("fonts/Norse-Bold.otf");
+    font-weight: bold;
+}
+
+:root {
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 20px;
+
+    --text-color: black;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    /* border: 1px dashed red; */
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    padding: 10px 25px;
+
+    background-color: darkslategray;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    margin-left: 50px;
+}
+
+button:hover {
+    background-color: rgba(57, 89, 89, 1);  
+}
+
+button:active {
+    background-color: rgba(17, 49, 49, 1);
+}
+
+input {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.left-section {
+    width: 40%;
+    height: 100%;
+
+    text-align: center;
+    position: relative;
+
+    background-image: url("img/alex-azabache-x5KZMQ_RPXc-unsplash.jpg");
+    background-size: cover;
+
+    color: white;
+}
+
+.odin-header {
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    top: 30%;
+
+    padding: 5% 0;
+
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    font-family: Norse;
+    font-size: 3rem;
+}
+
+.odin-logo {
+    height: 125px;
+}
+
+.photo-credit {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+
+    opacity: 75%;
+}
+
+.right-section {
+    width: 60%;
+    height: 100%;
+
+    position: relative;
+}
+
+.spiel {
+    padding: 50px;
+    font-weight: bold;
+}
+
+.signup-form-background {
+    width: 100%;
+    min-height: 250px;
+
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+
+    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.5);
+
+    padding: 25px 50px;
+    margin-bottom: 25px;
+}
+
+#signup-form {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 10px 50px;
+}
+
+.signup-form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-error {
+    color: red;
+    opacity: 0.8;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+input:valid {
+    background: white url("img/check_circle_FILL0_wght400_GRAD0_opsz48.svg") right no-repeat;
+    background-size: 30px;
+}
+
+input:invalid {
+    outline: 2px solid red;
+}
+
+input:placeholder-shown {
+    outline: none;
+}
