@@ -32,7 +32,7 @@ ul, ol {
 
 a, a:hover, a:visited {
     text-decoration: none;
-    color: white;
+    color: rgb(216, 216, 216);
 }
 
 button {
@@ -77,7 +77,7 @@ p:last-child {
 
 .left-section {
     width: 40%;
-    height: 100%;
+    min-height: 100%;
 
     text-align: center;
     position: relative;
@@ -90,7 +90,6 @@ p:last-child {
 
 .odin-header {
     position: absolute;
-    height: 30%;
     width: 100%;
     top: 30%;
 
@@ -105,6 +104,7 @@ p:last-child {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 
     font-family: Norse;
     font-size: 3rem;
@@ -124,9 +124,9 @@ p:last-child {
 
 .right-section {
     width: 60%;
-    height: 100%;
+    min-height: 100%;
 
-    position: relative;
+    /* position: relative; */
 }
 
 .spiel {
@@ -149,8 +149,14 @@ p:last-child {
 
 #signup-form {
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(6, 1fr) / 1fr;
     gap: 10px 50px;
+}
+
+@media screen and (min-width: 1080px) {
+    #signup-form {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
 }
 
 .signup-form-item {
@@ -168,6 +174,12 @@ p:last-child {
     opacity: 0;
 }
 
+input {
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    padding: 8px;
+}
+
 input:valid {
     background: white url("img/check_circle_FILL0_wght400_GRAD0_opsz48.svg") right no-repeat;
     background-size: 30px;
@@ -179,4 +191,9 @@ input:invalid {
 
 input:placeholder-shown {
     outline: none;
+}
+
+input.input-error {
+    background: none;
+    outline: 2px solid red;
 }

@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
         <title>Another Mega Form</title>
     </head>
     <body>
@@ -54,7 +55,7 @@
                     <div class="signup-form-item">
                         <label for="password-confirm">Confirm password</label>
                         <input type="password" name="password-confirm" id="password-confirm" placeholder="UpperCaseAndNumb3r" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="use an upper case, lower case character and a digit" required>
-                        <small class="form-error invisible">I'm an error m8</small>
+                        <small class="form-error invisible">Passwords do not match!</small>
                     </div>
                 </form>
             </div>
